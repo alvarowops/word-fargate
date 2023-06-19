@@ -12,7 +12,7 @@ ENV WORDPRESS_DB_NAME=nginx \
     WORDPRESS_POST_REVISIONS=false \
     WORDPRESS_CACHE=true \
     WORDPRESS_DISALLOW_FILE_MODS=true \
-    WORDPRESS_FORCE_SSL_ADMIN=true \
+    WORDPRESS_FORCE_SSL_ADMIN=false \
     WORDPRESS_COOKIE_SECURE=true \
     WORDPRESS_DISALLOW_UNFILTERED_HTML=true \
     WORDPRESS_DISABLE_WP_CRON=true \
@@ -20,12 +20,12 @@ ENV WORDPRESS_DB_NAME=nginx \
 
 # Configurar las variables de entorno para la instalación de WordPress
 ENV WORDPRESS_CONFIG_EXTRA="\
-    define('WP_SITEURL', 'www.alvaronavarro.com	'); \
-    define('WP_HOME', 'www.alvaronavarro.com'); \
+    define('WP_SITEURL', 'http://alb-word-243323243.us-east-1.elb.amazonaws.com/'); \
+    define('WP_HOME', 'http://alb-word-243323243.us-east-1.elb.amazonaws.com/'); \
     define('WP_POST_REVISIONS', false); \
     define('WP_CACHE', true); \
     define('DISALLOW_FILE_MODS', true); \
-    define('FORCE_SSL_ADMIN', true); \
+    define('FORCE_SSL_ADMIN', false); \
     define('COOKIE_SECURE', true); \
     define('DISALLOW_UNFILTERED_HTML', true); \
     define('DISABLE_WP_CRON', true); \
