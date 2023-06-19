@@ -21,8 +21,8 @@ define('NONCE_SALT',       'Duoc.2022');
 $table_prefix = 'wp_';
 
 /** Dirección URL de WordPress */
-define('WP_SITEURL', 'http://alb-word-243323243.us-east-1.elb.amazonaws.com/');
-define('WP_HOME', 'http://alb-word-243323243.us-east-1.elb.amazonaws.com/');
+define('WP_SITEURL', 'http://alb-word-1233871793.us-east-1.elb.amazonaws.com');
+define('WP_HOME', 'http://alb-word-1233871793.us-east-1.elb.amazonaws.com');
 
 /** Activar el modo de depuración (desactivar en producción) */
 define('WP_DEBUG', false);
