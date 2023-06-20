@@ -83,10 +83,12 @@ Al conectar la instancia EC2 con RDS se crean 2 SG
 | ------ | ------ | ------ |
 | rds-ec2-1	 | Grupo de seguridad adjunto a la base de datos wordpress para permitir que las instancias EC2 con grupos de seguridad específicos adjuntos se conecten a la base de datos. La modificación podría conducir a la pérdida de conexión. | Entrada Tipo MYSQL Aurora Protocolo TCP Intervalo de puertos 3306 Origen SG tareas |
 | ec2-rds-1	| Grupo de seguridad adjunto a las instancias para conectarse de forma segura a la base de datos wordpress. La modificación podría conducir a la pérdida de conexión. | Salida Tipo MYSQL Aurora Protocolo TCP Intervalo de puertos 3306 Origen SG tareas |
-Crear 2 SG uno para el balanceador de carga y otro para las tareas"Contenedores"
- | SG | Descripción |  Reglas |
+
+Crear 2 SG uno para el balanceador de carga y otro para las tareas "Contenedores"
+| SG | Descripción | Reglas |
 | ------ | ------ | ------ |
 | ALB-SG| Grupo de seguridad para permitir trafico al puerto 80 . | entrada Tipo HTTP TCP Intervalo de puertos 80 Origen Anywhere IPV4 |
+
  este grupo debe tener una regla de salida para conectarse a el grupo de seguridad de las tareas 
 - Tipo personalizado
 - TCP 
